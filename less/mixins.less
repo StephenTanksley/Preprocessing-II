@@ -19,12 +19,17 @@
 //@bg-color = #008080, @color = #ffffff
 
 .btn {
-    .btn-mixin(78%, 12%, #008080, none, 1rem, #ffffff, 1.6rem, pointer);
+    .btn-mixin(78%, 12%, #16a2b8, none, 1rem, #ffffff, 1.6rem, pointer);
+
+    @media @mobile {
+        .btn-mixin(100%, 25%, #16a2b8, none, 1rem, #ffffff, 1.6rem, pointer);
+        margin-bottom: 1rem;
+    }
 
     &:hover {
         background-color: white;
         color: teal;
-        transition-duration: 0.4s;
+        transition-duration: 0.3s;
     }
 }
 
@@ -35,4 +40,9 @@
     width: 100%;
     justify-content: @justify-content;
     align-items: @align-items;
+}
+
+.mobile-center {
+    width: 80%;
+    margin: 0 auto;
 }

@@ -1,17 +1,34 @@
 .btn {
   width: 78%;
   height: 12%;
-  background-color: #008080;
+  background-color: #16a2b8;
   border: none;
   border-radius: 1rem;
   color: #ffffff;
   font-size: 1.6rem;
   cursor: pointer;
 }
+@media (max-width: 500px) {
+  .btn {
+    width: 100%;
+    height: 25%;
+    background-color: #16a2b8;
+    border: none;
+    border-radius: 1rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+}
 .btn:hover {
   background-color: white;
   color: teal;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
+}
+.mobile-center {
+  width: 80%;
+  margin: 0 auto;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -185,18 +202,30 @@ img {
 }
 .header-nav {
   display: flex;
-  flex-direction: flex-end;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: space-around;
+  width: 100%;
   margin-right: 0;
+  padding: 0.5rem;
+  align-content: right;
+  align-items: right;
+}
+@media (max-width: 500px) {
+  .header-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .header-nav a {
   color: black;
   text-decoration: none;
   font-size: 1.6rem;
+  padding: 1rem;
 }
 .header-nav a:hover {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #008080;
   transition-duration: 0.2s;
 }
@@ -217,13 +246,35 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 1.5rem;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -231,6 +282,11 @@ img {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -244,32 +300,65 @@ img {
   width: 75%;
   margin: 0 auto 30px;
 }
-.home .content-destination img {
+.home img {
   border-radius: 10px;
 }
-.home .content-pick {
+.content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
-.home .content-pick .destination {
+@media (max-width: 500px) {
+  .content-pick {
+    flex-direction: column;
+  }
+}
+.content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
+@media (max-width: 500px) {
+  .content-pick .destination {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
 .headerSpacing {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  justify-items: space-around;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .headerSpacing {
+    flex-direction: column;
+    margin: 1rem;
+  }
 }
 .header-top {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  justify-items: space-around;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .header-top {
+    flex-direction: column;
+    margin: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .header-top {
+    flex-direction: column;
+  }
+  .header-top .header-text {
+    width: 100%;
+  }
+  .header-top .header-nav {
+    width: 100%;
+  }
 }
 .header-bottom {
   margin-top: 1rem;
@@ -282,4 +371,12 @@ img {
   display: flex;
   width: 60%;
   margin-top: 1rem;
+}
+@media (max-width: 500px) {
+  .header-text {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
 }

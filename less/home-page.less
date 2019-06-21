@@ -6,16 +6,31 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-
+    @media @mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 80%;
+      margin-bottom: 1.5rem;
+    }
 
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        .mobile-center();
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        .mobile-center();
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +41,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -41,26 +60,39 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
-    img {
-      border-radius: 10px;
-    }
   }
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+  img {
+    border-radius: 10px;
+  }
+}
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
+.content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed @navigation-border;
+  display: flex;
+  justify-content: space-between;
+
+  @media @mobile {
+    flex-direction: column;
+  }
+
+  .destination {
+    width: 30%;
+    margin-bottom: 30px;
+
+    @media @mobile {
+      width: 80%;
+      .mobile-center();
+      margin-bottom: 1rem;
+      text-align: center;
+      justify-content: center;
     }
   }
 }
 
 // home
+
 
 .header-border () {
   margin-top: 1rem;
@@ -73,22 +105,46 @@
 
 .headerSpacing {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  justify-items: space-around;
   align-items: center;
+
+  @media @mobile {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
 }
 
 .header-top {
-    .headerSpacing ();
+  .headerSpacing();
+
+  @media @mobile {
+
+    flex-direction: column;
+
+    .header-text {
+      width: 100%;
+    }
+
+    .header-nav {
+      width: 100%;
+    }
+  }
 }
 
 .header-bottom {
-  .header-border ();
+  .header-border();
 }
 
 .header-text {
   display: flex;
   width: 60%;
   margin-top: 1rem;
+
+  @media @mobile {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
